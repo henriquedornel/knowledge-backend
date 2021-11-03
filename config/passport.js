@@ -1,7 +1,10 @@
-const { authSecret } = require('../.env');
 const passport = require('passport');
 const passportJwt = require('passport-jwt');
 const { Strategy, ExtractJwt } = passportJwt;
+
+const dotenv = require('dotenv');
+dotenv.config();
+const authSecret = process.env.AUTH_SECRET;
 
 module.exports = app => {
   const params = {
