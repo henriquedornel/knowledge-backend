@@ -1,8 +1,9 @@
-const { db } = require('./.env');
+const dotenv = require('dotenv');
+dotenv.config();
 
 module.exports = {
-  client: 'postgresql',
-  connection: db,
+  client: 'pg',
+  connection: process.env.DATABASE_URL + process.env.DATABASE_URL_OPTIONS,
   pool: {
     min: 2,
     max: 10,
