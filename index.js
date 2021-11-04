@@ -17,6 +17,6 @@ consign()
   .then('./config/routes.js') //as rotas só serão carregadas depois que as APIs já tiverem sido carregadas
   .into(app);
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log('Backend executanto...');
 });
