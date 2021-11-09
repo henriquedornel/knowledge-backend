@@ -4,7 +4,7 @@ module.exports = app => {
   const { existsOrError } = app.utils.validate;
 
   const save = (req, res) => {
-    const article = { ...req.body }; //objeto gerado pelo body-parser
+    const article = { ...req.body }; //objeto gerado
     if (req.params.id) article.id = req.params.id; //quando for um update
 
     try {

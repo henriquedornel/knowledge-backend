@@ -9,7 +9,7 @@ module.exports = app => {
   };
 
   const save = async (req, res) => {
-    const user = { ...req.body }; //objeto gerado pelo body-parser
+    const user = { ...req.body }; //objeto gerado
     if (req.params.id) user.id = req.params.id; //quando for um update
 
     if (!req.originalUrl.startsWith('/users')) user.admin = false; //para prevenir que um usuário se cadastre como administrador, verificando se a URL de origem é "/users"
